@@ -1,103 +1,266 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import SectionHeader from "./components/SectionHeading";
+import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const teamMembers = [
+    {
+      id: 1,
+      name: "John Doe",
+      position: "Forward",
+      image: "/team_members/1.png",
+    },
+    {
+      id: 2,
+      name: "Jane Smith",
+      position: "Midfielder",
+      image: "/team_members/1.png",
+    },
+    {
+      id: 3,
+      name: "Alice Johnson",
+      position: "Defender",
+      image: "/team_members/1.png",
+    },
+    {
+      id: 4,
+      name: "Bob Brown",
+      position: "Goalkeeper",
+      image: "/team_members/1.png",
+    },
+    {
+      id: 5,
+      name: "Charlie Davis",
+      position: "Captain",
+      image: "/team_members/1.png",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  const imgs = Array(9)
+    .fill(0)
+    .map((_, index) => index + 1);
+
+  const [imagesToDisplay, setImagesToDisplay] = useState<string[]>([]);
+
+  // Function to determine the number of images to display based on screen size
+  const updateImagesToDisplay = () => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 640) {
+      // Mobile: grid-cols-1, limit to 6 images
+      setImagesToDisplay(imgs.slice(0, 6));
+    } else if (screenWidth >= 640 && screenWidth < 1024) {
+      // Tablet: grid-cols-2, limit to 8 images
+      setImagesToDisplay(imgs.slice(0, 8));
+    } else {
+      // Desktop: grid-cols-3, show all 9 images
+      setImagesToDisplay(imgs.slice(0, 9));
+    }
+  };
+
+  // useEffect to update the images on window resize and initial load
+  useEffect(() => {
+    // Initial update
+    updateImagesToDisplay();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", updateImagesToDisplay);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", updateImagesToDisplay);
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
+
+  return (
+    <>
+      <Header />
+
+      <Hero />
+
+      <section className="flex flex-col items-center mt-20 gap-y-8 md:gap-y-18">
+        {/* About us */}
+        <section className="flex flex-col items-center w-full px-4 sm:px-6 lg:px-8">
+          {/* inner element */}
+          <section className="flex flex-col items-center w-full max-w-7xl gap-8 md:gap-18">
+            {/* heading */}
+            <SectionHeader text="ABOUT US" />
+
+            {/* body */}
+            <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-24 xl:gap-32">
+              {/* Text Section */}
+              <div className="flex-1 w-full md:w-auto">
+                <p className="text-base sm:text-lg mb-6 md:mb-8 robotoSlab text-[var(--text-color)] text-center md:text-left">
+                  Mt. 8848 FC is a football club created to bring together
+                  Nepalese boys in New Zealand, building brotherhood and
+                  achieving greatness as a team. We welcome everyone to join us,
+                  whether you’re a skilled player or just starting out. Through
+                  football, we aim to unite, support each other, and make a
+                  positive impact in our community. Together, we play, grow, and
+                  succeed!
+                </p>
+
+                <div className="w-full flex justify-center md:justify-start">
+                  <Link
+                    className="fjallaOne text-white text-lg sm:text-xl bg-[var(--blue-color)] px-6 py-2 inline-block text-center"
+                    href="#"
+                  >
+                    Know More
+                  </Link>
+                </div>
+              </div>
+
+              {/* Image Section */}
+              <div className="flex-1 w-full aspect-w-16 aspect-video relative">
+                <Image
+                  src="/image1.png" // Ensure this path is correct
+                  alt="Hero image"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </section>
+        </section>
+
+        {/* Moments */}
+        <section className="flex flex-col items-center w-full px-4 sm:px-6 lg:px-8 bg-[var(--secondary-bg)] py-8 md:py-18">
+          <section className="flex flex-col items-center w-full max-w-7xl gap-8 md:gap-18">
+            {/* Section Header */}
+            <SectionHeader text="SOME MOMENTS" />
+
+            {/* Grid Layout */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 sm:gap-6">
+              {/* Loop through the images */}
+              {imagesToDisplay.map((imgName, index) => (
+                <div
+                  key={index}
+                  className="w-full aspect-w-16 aspect-video relative"
+                >
+                  {/* Aspect ratio container */}
+                  <Image
+                    src={"/moments/" + imgName + ".png"}
+                    alt={`Moment ${index + 1}`}
+                    fill // Fill the parent container
+                    className="object-cover" // Ensure the image fits without stretching
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        </section>
+
+        {/* teams member */}
+        <section className="flex flex-col items-center w-full px-4 sm:px-6 lg:px-8">
+          <section className="flex flex-col items-center w-full max-w-7xl gap-8 md:gap-18">
+            {/* Heading */}
+            <SectionHeader text="TEAM MEMBERS" />
+
+            {/* Team Members Grid */}
+            <div className="flex flex-col w-full items-center justify-center gap-8">
+              {/* First Row (3 Members) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-6">
+                {teamMembers.slice(0, 3).map((member, index) => (
+                  <div
+                    key={member.id}
+                    className={`flex flex-col items-center ${
+                      index === 2
+                        ? "sm:col-span-2 lg:col-span-1 sm:justify-self-center"
+                        : ""
+                    }`}
+                  >
+                    {/* Image Container with Portrait Aspect Ratio */}
+                    <div className="w-48 h-64 sm:w-56 sm:h-80 relative">
+                      {" "}
+                      {/* Portrait size */}
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    {/* Name */}
+                    <h3 className="mt-4 text-lg sm:text-xl font-semibold robotoSlab text-[var(--text-color)]">
+                      {member.name}
+                    </h3>
+                    {/* Position */}
+                    <p className="text-sm sm:text-md robotoSlab text-[var(--text-color)]">
+                      {member.position}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Second Row (2 Members) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-6">
+                {teamMembers.slice(3, 5).map((member) => (
+                  <div key={member.id} className="flex flex-col items-center">
+                    {/* Image Container with Portrait Aspect Ratio */}
+                    <div className="w-48 h-64 sm:w-56 sm:h-80 relative">
+                      {" "}
+                      {/* Portrait size */}
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    {/* Name */}
+                    <h3 className="mt-4 text-lg sm:text-xl font-semibold robotoSlab text-[var(--text-color)]">
+                      {member.name}
+                    </h3>
+                    {/* Position */}
+                    <p className="text-sm sm:text-md robotoSlab text-[var(--text-color)]">
+                      {member.position}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </section>
+
+        {/* sponsor */}
+        <section className="w-full relative py-16 sm:py-20 lg:py-28 flex justify-center items-center ">
+          {/* Background Image */}
+          <div className="w-full h-full absolute">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/background.png" // Ensure this path is correct
+              alt="Background"
+              fill
+              className="object-cover"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          </div>
+
+          {/* Content */}
+          <div className="z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
+            <p className="fjallaOne text-xl sm:text-2xl text-white">
+              WANT TO SUPPORT US?
+            </p>
+
+            <p className="mt-4 text-xs sm:text-sm lg:text-lg font-semibold robotoSlab text-white max-w-2xl">
+              We’re seeking sponsors to support our mission and create
+              meaningful impact. For partnership opportunities, contact us at{" "}
+              <a href="mailto:mt8848fc@gmail.com" className="underline">
+                mt8848fc@gmail.com
+              </a>
+              . Join us in making a difference!
+            </p>
+          </div>
+        </section>
+
+        <Form />
+        <Footer />
+      </section>
+    </>
   );
 }
