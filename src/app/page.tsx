@@ -8,6 +8,9 @@ import Hero from "./components/Hero";
 import SectionHeader from "./components/SectionHeading";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
+import TeamMembersSection from "./components/TeamMember";
+import MomentsSection from "./components/Moments";
+import SponsorSection from "./components/Sponsor";
 
 // Team members data
 const teamMembers = [
@@ -15,31 +18,55 @@ const teamMembers = [
     id: 1,
     name: "Hari Kumar Rana Magar",
     position: "President",
-    image: "/team_members/1.png",
+    image: "/team_members/hari_kumar_rana_magar.jpg",
   },
   {
     id: 2,
     name: "Ramesh Dangol",
-    position: "Midfielder",
-    image: "/team_members/1.png",
+    position: "Team Manager",
+    image: "/team_members/ramesh_dangol.jpg",
   },
   {
     id: 3,
-    name: "Alice Johnson",
-    position: "Defender",
-    image: "/team_members/1.png",
+    name: "Ashish Puri",
+    position: "Team Secretary",
+    image: "/team_members/ashish_puri.jpg",
   },
   {
     id: 4,
-    name: "Bob Brown",
-    position: "Goalkeeper",
-    image: "/team_members/1.png",
+    name: "Sushal K.C.",
+    position: "Event Co-ordinator",
+    image: "/team_members/sushal_kc.jpg",
   },
   {
     id: 5,
-    name: "Charlie Davis",
-    position: "Captain",
-    image: "/team_members/1.png",
+    name: "Suraj Shrestha",
+    position: "Coach / Team Advisor",
+    image: "/team_members/suraj_shrestha.jpg",
+  },
+  {
+    id: 6,
+    name: "Prachanda Gurung",
+    position: "Team Advisor",
+    image: "/team_members/prachanda_gurung.jpg",
+  },
+  {
+    id: 7,
+    name: "Satish Khatri",
+    position: "Executive member / Striker",
+    image: "/team_members/satish_khatri.jpg",
+  },
+  {
+    id: 8,
+    name: "Buddha Gharti",
+    position: "Executive member / Defender",
+    image: "/team_members/buddha_gharti.jpg",
+  },
+  {
+    id: 9,
+    name: "Dinesh Thapa Magar",
+    position: "Assitant Coach",
+    image: "/team_members/dinesh_thapa_magar.jpg",
   },
 ];
 
@@ -130,118 +157,6 @@ const AboutUsSection = () => (
           />
         </div>
       </div>
-    </div>
-  </section>
-);
-
-// Moments Section Component
-const MomentsSection = ({ imagesToDisplay }: { imagesToDisplay: string[] }) => (
-  <section className="flex flex-col items-center w-full px-4 sm:px-6 lg:px-8 bg-[var(--secondary-bg)] py-8 md:py-18">
-    <div className="flex flex-col items-center w-full max-w-7xl gap-8 md:gap-18">
-      <SectionHeader text="SOME MOMENTS" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 sm:gap-6">
-        {imagesToDisplay.map((imgName, index) => (
-          <div key={index} className="w-full aspect-w-16 aspect-video relative">
-            <Image
-              src={`/moments/${imgName}`}
-              alt={`Moment ${index + 1}`}
-              fill
-              className="object-cover"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-type TeamMember = {
-  id: number;
-  name: string;
-  position: string;
-  image: string;
-};
-
-// Team Members Section Component
-const TeamMembersSection = ({ teamMembers }: { teamMembers: TeamMember[] }) => (
-  <section className="flex flex-col items-center w-full px-4 sm:px-6 lg:px-8">
-    <div className="flex flex-col items-center w-full max-w-7xl gap-8 md:gap-18">
-      <SectionHeader text="TEAM MEMBERS" />
-      <div className="flex flex-col w-full items-center justify-center gap-8">
-        {/* First Row (3 Members) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-6">
-          {teamMembers.slice(0, 3).map((member, index) => (
-            <TeamMemberCard
-              key={member.id}
-              member={member}
-              isCentered={index === 2}
-            />
-          ))}
-        </div>
-        {/* Second Row (2 Members) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-6">
-          {teamMembers.slice(3, 5).map((member) => (
-            <TeamMemberCard key={member.id} member={member} />
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-// Team Member Card Component
-const TeamMemberCard = ({
-  member,
-  isCentered = false,
-}: {
-  member: (typeof teamMembers)[0];
-  isCentered?: boolean;
-}) => (
-  <div
-    className={`flex flex-col items-center ${
-      isCentered ? "sm:col-span-2 lg:col-span-1 sm:justify-self-center" : ""
-    }`}
-  >
-    <div className="w-48 h-64 sm:w-56 sm:h-80 relative">
-      <Image
-        src={member.image}
-        alt={member.name}
-        fill
-        className="object-cover"
-      />
-    </div>
-    <h3 className="mt-4 text-lg sm:text-xl font-semibold robotoSlab text-[var(--text-color)]">
-      {member.name}
-    </h3>
-    <p className="text-sm sm:text-md robotoSlab text-[var(--text-color)]">
-      {member.position}
-    </p>
-  </div>
-);
-
-// Sponsor Section Component
-const SponsorSection = () => (
-  <section className="w-full relative py-16 sm:py-20 lg:py-28 flex justify-center items-center">
-    <div className="w-full h-full absolute">
-      <Image
-        src="/background.png"
-        alt="Background"
-        fill
-        className="object-cover"
-      />
-    </div>
-    <div className="z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
-      <p className="fjallaOne text-xl sm:text-2xl text-white">
-        WANT TO SUPPORT US?
-      </p>
-      <p className="mt-4 text-xs sm:text-sm lg:text-lg font-semibold robotoSlab text-white max-w-2xl">
-        We’re seeking sponsors to support our mission and create meaningful
-        impact. For partnership opportunities, contact us at{" "}
-        <a href="mailto:mt8848fc@gmail.com" className="underline">
-          mt8848fc@gmail.com
-        </a>
-        . Join us in making a difference!
-      </p>
     </div>
   </section>
 );

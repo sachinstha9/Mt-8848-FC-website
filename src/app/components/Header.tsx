@@ -56,7 +56,12 @@ export default function Header() {
             </li>
             <li>
               <Link href="#" className="header-list">
-                Teams & Achievements
+                Moments
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="header-list">
+                Teams Members
               </Link>
             </li>
             <li>
