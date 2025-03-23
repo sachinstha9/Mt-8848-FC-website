@@ -11,64 +11,7 @@ import Footer from "./components/Footer";
 import TeamMembersSection from "./components/TeamMember";
 import MomentsSection from "./components/Moments";
 import SponsorSection from "./components/Sponsor";
-
-// Team members data
-const teamMembers = [
-  {
-    id: 1,
-    name: "Hari Kumar Rana Magar",
-    position: "President",
-    image: "/team_members/hari_kumar_rana_magar.jpg",
-  },
-  {
-    id: 2,
-    name: "Ramesh Dangol",
-    position: "Team Manager",
-    image: "/team_members/ramesh_dangol.jpg",
-  },
-  {
-    id: 3,
-    name: "Ashish Puri",
-    position: "Team Secretary",
-    image: "/team_members/ashish_puri.jpg",
-  },
-  {
-    id: 4,
-    name: "Sushal K.C.",
-    position: "Event Co-ordinator",
-    image: "/team_members/sushal_kc.jpg",
-  },
-  {
-    id: 5,
-    name: "Suraj Shrestha",
-    position: "Coach / Team Advisor",
-    image: "/team_members/suraj_shrestha.jpg",
-  },
-  {
-    id: 6,
-    name: "Prachanda Gurung",
-    position: "Team Advisor",
-    image: "/team_members/prachanda_gurung.jpg",
-  },
-  {
-    id: 7,
-    name: "Satish Khatri",
-    position: "Executive member / Striker",
-    image: "/team_members/satish_khatri.jpg",
-  },
-  {
-    id: 8,
-    name: "Buddha Gharti",
-    position: "Executive member / Defender",
-    image: "/team_members/buddha_gharti.jpg",
-  },
-  {
-    id: 9,
-    name: "Dinesh Thapa Magar",
-    position: "Assitant Coach",
-    image: "/team_members/dinesh_thapa_magar.jpg",
-  },
-];
+import teamMembers from "./data/teamMembers.json"; // Import the JSON file
 
 // Generate image names (1 to 9)
 const imgs: string[] = Array.from(

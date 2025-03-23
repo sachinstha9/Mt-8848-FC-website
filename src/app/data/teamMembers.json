@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "Hari Kumar Rana Magar",
+    "position": "President",
+    "image": "/team_members/hari_kumar_rana_magar.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Ramesh Dangol",
+    "position": "Team Manager",
+    "image": "/team_members/ramesh_dangol.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Ashish Puri",
+    "position": "Team Secretary",
+    "image": "/team_members/ashish_puri.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Sushal K.C.",
+    "position": "Event Co-ordinator",
+    "image": "/team_members/sushal_kc.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Suraj Shrestha",
+    "position": "Coach / Team Advisor",
+    "image": "/team_members/suraj_shrestha.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Prachanda Gurung",
+    "position": "Team Advisor",
+    "image": "/team_members/prachanda_gurung.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Satish Khatri",
+    "position": "Executive member / Striker",
+    "image": "/team_members/satish_khatri.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Buddha Gharti",
+    "position": "Executive member / Defender",
+    "image": "/team_members/buddha_gharti.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Dinesh Thapa Magar",
+    "position": "Assitant Coach",
+    "image": "/team_members/dinesh_thapa_magar.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Krishna",
+    "position": "Winger",
+    "image": "/team_members/krishna.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Bikash Bhandari",
+    "position": "Winger",
+    "image": "/team_members/bikash_bhandari.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Sabal Gurung",
+    "position": "Winger",
+    "image": "/team_members/sabal_gurung.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Anmol Neupane",
+    "position": "Winger",
+    "image": "/team_members/anmol_neupane.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Mubin Shahi",
+    "position": "Winger",
+    "image": "/team_members/mubin_shahi.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Ashish KC",
+    "position": "Defender",
+    "image": "/team_members/ashish_kc.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Anmol Khadka",
+    "position": "Midfielder",
+    "image": "/team_members/anmol_khadka.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Prabhash Thapa",
+    "position": "Defender",
+    "image": "/team_members/prabhash_thapa.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Anil Rokka",
+    "position": "Defender",
+    "image": "/team_members/anil_rokka.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Sundar Thapa",
+    "position": "Defender",
+    "image": "/team_members/sundar_thapa.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Bipin Ghising",
+    "position": "Midfielder",
+    "image": "/team_members/bipin_ghising.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Madan Pun",
+    "position": "Midfielder",
+    "image": "/team_members/madan_pun.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Pradeep Thapa Magar",
+    "position": "Midfielder",
+    "image": "/team_members/pradeep_thapa_magar.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Sandeep Poudel",
+    "position": "Midfielder",
+    "image": "/team_members/sandeep_poudel.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Susan Bharati",
+    "position": "Midfielder",
+    "image": "/team_members/susan_bharati.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Sushant Acharya",
+    "position": "Defender",
+    "image": "/team_members/sushant_acharya.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Bhimsen Saru",
+    "position": "Defender",
+    "image": "/team_members/bhimsen_saru.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Bishal Chaudhary",
+    "position": "Defender",
+    "image": "/team_members/bishal_chaudhary.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Sagar Dhungana",
+    "position": "Goalkeeper",
+    "image": "/team_members/sagar_dhungana.jpg"
+  }
+]
