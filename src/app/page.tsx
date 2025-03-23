@@ -13,13 +13,13 @@ import Footer from "./components/Footer";
 const teamMembers = [
   {
     id: 1,
-    name: "John Doe",
-    position: "Forward",
+    name: "Hari Kumar Rana Magar",
+    position: "President",
     image: "/team_members/1.png",
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Ramesh Dangol",
     position: "Midfielder",
     image: "/team_members/1.png",
   },
@@ -143,7 +143,7 @@ const MomentsSection = ({ imagesToDisplay }: { imagesToDisplay: string[] }) => (
         {imagesToDisplay.map((imgName, index) => (
           <div key={index} className="w-full aspect-w-16 aspect-video relative">
             <Image
-              src={`/moments/${imgName}.png`}
+              src={`/moments/${imgName}`}
               alt={`Moment ${index + 1}`}
               fill
               className="object-cover"
@@ -207,7 +207,7 @@ const TeamMemberCard = ({
         src={member.image}
         alt={member.name}
         fill
-        className="object-cover rounded-lg"
+        className="object-cover"
       />
     </div>
     <h3 className="mt-4 text-lg sm:text-xl font-semibold robotoSlab text-[var(--text-color)]">
