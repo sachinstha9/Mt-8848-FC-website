@@ -87,7 +87,7 @@ export default function Contact() {
                     href="mailto:mt8848fc@gmail.com"
                     className="text-base sm:text-lg text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors flex items-center gap-2"
                   >
-                    mt8848fc@gmail.com
+                    mt8848fc[at]gmail[dot]com
                   </a>
                 </div>
 

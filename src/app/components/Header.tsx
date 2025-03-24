@@ -45,7 +45,7 @@ export default function Header() {
           {/* Navigation Links (Desktop) */}
           <ul className="hidden md:flex justify-between items-center gap-10">
             <li>
-              <Link href="#" className="header-list">
+              <Link href="/" className="header-list">
                 Home
               </Link>
             </li>
@@ -55,17 +55,17 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#" className="header-list">
+              <Link href="/moments" className="header-list">
                 Moments
               </Link>
             </li>
             <li>
-              <Link href="#" className="header-list">
+              <Link href="/team" className="header-list">
                 Team Members
               </Link>
             </li>
             <li>
-              <Link href="#" className="header-list">
+              <Link href="/contact" className="header-list">
                 Contact
               </Link>
             </li>
