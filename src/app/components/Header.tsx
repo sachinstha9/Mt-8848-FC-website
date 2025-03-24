@@ -50,7 +50,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#" className="header-list">
+              <Link href="/about" className="header-list">
                 About Us
               </Link>
             </li>
