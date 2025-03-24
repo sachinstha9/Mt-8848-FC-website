@@ -2,13 +2,11 @@
 import Image from "next/image";
 import Header from "../components/Header";
 import SectionHeader from "../components/SectionHeading";
-import TeamMembersSection from "../components/TeamMember";
-import teamMembers from "../data/teamMembers.json";
-import SponsorSection from "../components/Sponsor";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
 import BreadcrumbSection from "../components/Breadcrumb";
 import { useEffect, useState } from "react";
+import momentsData from "../data/moments.json"; // Import the JSON file
 
 interface EventData {
   title: string;
@@ -16,30 +14,6 @@ interface EventData {
   description: string;
   images: string[];
 }
-
-const eventsData: EventData[] = [
-  {
-    title: "MT.8848 FC Married vs Unmarried Event",
-    date: "19th March 2025",
-    description:
-      "We're thrilled to host this event and grateful for the overwhelming love and support from our community, sponsors, and supporters. Thank you to everyone who made it a success, especially our players, management team and sponsors. Together, we'll keep uniting our Nepali society.",
-    images: [
-      "image1.png",
-      "image2.png",
-      "image3.png",
-      "image4.png",
-      "image5.png",
-      "image6.png",
-    ],
-  },
-  {
-    title: "Annual Football Tournament",
-    date: "10th June 2025",
-    description:
-      "Our biggest event of the year with teams from across the region competing for the championship.",
-    images: ["image7.png", "image8.png", "image9.png"],
-  },
-];
 
 const EventCard = ({ event }: { event: EventData }) => {
   const { title, date, description, images } = event;
@@ -49,7 +23,7 @@ const EventCard = ({ event }: { event: EventData }) => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width >= 768) {
-        setScreenSize("lg"); // Large (2 cols)
+        setScreenSize("lg"); // Large (3 cols)
       } else if (width >= 480) {
         setScreenSize("md"); // Medium (2 cols)
       } else {
@@ -65,11 +39,11 @@ const EventCard = ({ event }: { event: EventData }) => {
   const getGridCols = () => {
     switch (screenSize) {
       case "lg":
-        return "grid-cols-3"; // 2 columns (768px-1279px)
+        return "grid-cols-3";
       case "md":
-        return "grid-cols-2"; // 2 columns (480px-767px)
+        return "grid-cols-2";
       case "sm":
-        return "grid-cols-1"; // 1 column (<480px)
+        return "grid-cols-1";
       default:
         return "grid-cols-1";
     }
@@ -78,7 +52,7 @@ const EventCard = ({ event }: { event: EventData }) => {
   const getImageSize = () => {
     switch (screenSize) {
       case "lg":
-        return "50vw";
+        return "33vw";
       case "md":
         return "50vw";
       case "sm":
@@ -138,7 +112,7 @@ export default function Moments() {
             <SectionHeader text="SOME MOMENTS" />
 
             <div className="w-full px-1 xs:px-2 sm:px-3 md:px-4">
-              {eventsData.map((event, index) => (
+              {momentsData.map((event, index) => (
                 <EventCard key={`event-${index}`} event={event} />
               ))}
             </div>
