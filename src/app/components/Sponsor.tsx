@@ -4,7 +4,7 @@ const SponsorSection = () => (
   <section className="w-full relative py-16 sm:py-20 lg:py-28 flex justify-center items-center">
     <div className="w-full h-full absolute">
       <Image
-        src="/background.png"
+        src="/sponsor-background.png"
         alt="Background"
         fill
         className="object-cover"

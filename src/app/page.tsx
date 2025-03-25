@@ -85,7 +85,7 @@ const AboutUsSection = () => (
           <div className="w-full flex justify-center md:justify-start">
             <Link
               className="fjallaOne text-white text-lg sm:text-xl bg-[var(--blue-color)] px-6 py-2 inline-block text-center"
-              href="#"
+              href="/about"
             >
               Know More
             </Link>
@@ -93,7 +93,7 @@ const AboutUsSection = () => (
         </div>
         <div className="flex-1 w-full aspect-w-16 aspect-video relative">
           <Image
-            src="/image1.png"
+            src="/aboutus-photo.jpg"
             alt="Hero image"
             fill
             className="object-cover"
