@@ -75,22 +75,27 @@ export default function Header() {
             <section className="absolute top-full left-0 w-full bg-gray-100 md:hidden z-50">
               <ul className="flex flex-col items-center gap-4 py-4">
                 <li>
-                  <Link href="#" className="header-list">
+                  <Link href="/" className="header-list">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="header-list">
+                  <Link href="/about" className="header-list">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="header-list">
-                    Teams & Achievements
+                  <Link href="/moments" className="header-list">
+                    Moments
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="header-list">
+                  <Link href="/team" className="header-list">
+                    Team Members
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="header-list">
                     Contact
                   </Link>
                 </li>
