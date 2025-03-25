@@ -14,22 +14,16 @@ export default function Footer() {
       {/* Social Media Icons */}
       <div className="flex justify-center space-x-4 sm:space-x-6 mb-4">
         <Link
-          href="#"
+          href="https://www.facebook.com/profile.php?id=100089657247479"
           className="text-gray-800 flex justify-center items-center w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full bg-white hover:bg-gray-200 transition-colors"
         >
           <FaFacebook size={24} className="sm:w-7 sm:h-7" />
         </Link>
         <Link
-          href="#"
+          href="https://www.instagram.com/mt.8848_youth_club/"
           className="text-gray-800 flex justify-center items-center w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full bg-white hover:bg-gray-200 transition-colors"
         >
           <FaInstagram size={24} className="sm:w-7 sm:h-7" />
-        </Link>
-        <Link
-          href="#"
-          className="text-gray-800 flex justify-center items-center w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full bg-white hover:bg-gray-200 transition-colors"
-        >
-          <FaPinterest size={24} className="sm:w-7 sm:h-7" />
         </Link>
       </div>
 
@@ -48,7 +42,7 @@ export default function Footer() {
 
           <div className="flex items-center space-x-2">
             <FaPhone />
-            <span>123456789</span>
+            <span>021 269 1170</span>
           </div>
         </div>
       </div>
