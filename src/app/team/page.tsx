@@ -1,6 +1,5 @@
 import Header from "../components/Header";
 import SectionHeader from "../components/SectionHeading";
-import Form from "../components/Form";
 import Footer from "../components/Footer";
 import BreadcrumbSection from "../components/Breadcrumb";
 import teamMembers from "../data/teamMembers.json";
@@ -80,7 +79,6 @@ export default function Team() {
           </div>
         </section>
 
-        <Form />
         <Footer />
       </main>
     </>

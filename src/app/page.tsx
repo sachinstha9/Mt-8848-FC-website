@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import SectionHeader from "./components/SectionHeading";
-import Form from "./components/Form";
 import Footer from "./components/Footer";
 import TeamMembersSection from "./components/TeamMember";
 import MomentsSection from "./components/Moments";
@@ -60,7 +59,6 @@ export default function Home() {
         {/* Sponsor Section */}
         <SponsorSection />
 
-        <Form />
         <Footer />
       </main>
     </>

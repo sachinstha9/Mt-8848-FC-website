@@ -4,7 +4,6 @@ import SectionHeader from "../components/SectionHeading";
 import TeamMembersSection from "../components/TeamMember";
 import teamMembers from "../data/teamMembers.json";
 import SponsorSection from "../components/Sponsor";
-import Form from "../components/Form";
 import Footer from "../components/Footer";
 import BreadcrumbSection from "../components/Breadcrumb";
 
@@ -27,7 +26,6 @@ export default function AboutUs() {
         {/* Sponsor Section */}
         <SponsorSection />
 
-        <Form />
         <Footer />
       </main>
     </>

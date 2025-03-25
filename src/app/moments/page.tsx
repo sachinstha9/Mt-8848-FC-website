@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Header from "../components/Header";
 import SectionHeader from "../components/SectionHeading";
-import Form from "../components/Form";
 import Footer from "../components/Footer";
 import BreadcrumbSection from "../components/Breadcrumb";
 import { useEffect, useState } from "react";
@@ -119,7 +118,6 @@ export default function Moments() {
           </div>
         </section>
 
-        <Form />
         <Footer />
       </main>
     </>

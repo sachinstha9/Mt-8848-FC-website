@@ -1,6 +1,5 @@
 import Header from "../components/Header";
 import SponsorSection from "../components/Sponsor";
-import Form from "../components/Form";
 import Footer from "../components/Footer";
 import BreadcrumbSection from "../components/Breadcrumb";
 import {
@@ -150,7 +149,6 @@ export default function Contact() {
         {/* Sponsor Section */}
         <SponsorSection />
 
-        <Form />
         <Footer />
       </main>
     </>
