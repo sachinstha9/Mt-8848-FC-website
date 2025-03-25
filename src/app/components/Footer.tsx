@@ -36,7 +36,7 @@ export default function Footer() {
       {/* Contact Information */}
       <div className="robotoSlab text-gray-100 font-light flex flex-col items-center gap-4 mt-6 text-center">
         <p className="text-base sm:text-lg">
-          We're based in{" "}
+          We&apos;re based in{" "}
           <span className="underline">Auckland, New Zealand</span>.
         </p>
 

@@ -57,20 +57,20 @@ const StorySection = () => (
             the camaraderie and love for football from back home, decided to
             start a club where everyone could feel welcome—whether they were
             experienced players or just starting out. Named after Mount
-            Everest's height (8,848 meters), our club symbolizes resilience,
-            unity, and the courage to dream big. In the early days, it was just
-            a few of us playing in local parks with a ball and a lot of
-            enthusiasm. We didn't have much, but we had each other, and that was
-            enough. As more people joined, our small group grew into a
+            Everest&apos;s height (8,848 meters), our club symbolizes
+            resilience, unity, and the courage to dream big. In the early days,
+            it was just a few of us playing in local parks with a ball and a lot
+            of enthusiasm. We didn&apos;t have much, but we had each other, and
+            that was enough. As more people joined, our small group grew into a
             close-knit community. Football became more than just a game—it
             became a way to connect, support one another, and build something
             meaningful.
           </span>
           <span>
-            Today, Mt. 8848 FC is a family where everyone belongs. It's a place
-            where we grow together, both on and off the field, and strive to
-            make a positive impact in our community. Our journey is still
-            unfolding, and we're excited to climb higher, together.
+            Today, Mt. 8848 FC is a family where everyone belongs. It&apos;s a
+            place where we grow together, both on and off the field, and strive
+            to make a positive impact in our community. Our journey is still
+            unfolding, and we&apos;re excited to climb higher, together.
           </span>
         </p>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import SectionHeader from "./SectionHeading";
+import Image from "next/image";
 
 export default function Form() {
   return (
@@ -7,10 +8,9 @@ export default function Form() {
       <section className="flex flex-col items-center w-full max-w-7xl gap-8 md:gap-18">
         <SectionHeader text="JOIN US" />
 
-        <div className="flex md:flex-row items-center justify-center">
-          {/* Form Section */}
-          <div className="w-full md:w-1/2 lg:w-2/5 p-8">
-            {/* Adjusted width */}
+        <div className="flex md:flex-row items-center justify-center w-full">
+          {/* Form Section - made wider */}
+          <div className="w-full md:w-3/5 lg:w-1/2 p-8">
             <form className="space-y-4">
               {/* First Name and Last Name */}
               <div className="flex space-x-4">
@@ -113,15 +113,15 @@ export default function Form() {
             </form>
           </div>
 
-          {/* Image Section */}
-          <div className="w-full md:w-1/2 lg:w-2/5 mt-6 md:mt-0 md:pl-6 hidden md:block">
-            {/* Adjusted width */}
+          {/* Image Section - made wider */}
+          <div className="w-full md:w-2/5 lg:w-1/2 mt-6 md:mt-0 md:pl-6 hidden md:block">
             <div className="w-full h-[500px] sm:h-[600px] relative">
-              {/* Portrait-sized container */}
-              <img
+              <Image
                 src="/moments/1.png"
                 alt="Football player"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
