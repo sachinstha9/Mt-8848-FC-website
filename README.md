@@ -1,1 +1,3 @@
+This is the website for Mt. 8848 Football Club, a football club based in Auckland, New Zealand. The website is designed to share information about the club, including news, events, matches, and to help connect the club with the local community. It provides a clean, user-friendly interface that works smoothly across all devices and helps promote the club’s identity online.
 
+The website is built using Next.js with TypeScript, ensuring a fast, secure, and scalable experience. It uses server-side rendering for dynamic routing and modular components for easy maintenance and future updates. The project structure follows best practices for a modern web development workflow.
